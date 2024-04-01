@@ -18,7 +18,7 @@
 - Written in Nim 👑
 
 ## Examples
-```
+```nim
 import pkg/mailersend
 
 var
