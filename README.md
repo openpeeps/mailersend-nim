@@ -13,11 +13,31 @@
 </p>
 
 ## 😍 Key Features
-- [x] Open Source | `MIT` License
-- [x] Written in Nim language
+- Intuitive API interface
+- Direct to object serialization via `pkg/jsony`
+- Written in Nim 👑
 
 ## Examples
-...
+```
+import pkg/mailersend
+
+var
+  mls = initMailersend(getEnv("api_key"))
+  mail = newEmail()
+
+mail.setSubject("Hello, this is a test")
+    .setFrom("Example.com", "noreply@example.com")
+    .setTo("Joël Chibuzo", "joel.chibuzo@test.com")
+    .setText("This is a text/plain message")
+    .setHtml("This is a <strong>text/html</strong> message")
+
+let x: XHeaders = waitFor mls.send(mail)
+echo x # (id: "660appx0cc4cf5d1c00xb113", paused: false)
+
+# check current quota
+let q = waitFor mls.getQuota()
+echo q.remaining # 99
+```
 
 ### ❤ Contributions & Support
 - 🐛 Found a bug? [Create a new Issue](https://github.com/openpeeps/mailersend-nim/issues)
