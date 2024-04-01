@@ -169,5 +169,5 @@ when isMainModule:
       .setFrom("GoodGuest.ro", "noreply@goodguest.ro")
       .setTo("George Lemon", "georgelemon@protonmail.com")
       .setText("This is a plain text messsage")
-  # echo waitFor mls.send(mail)
+  echo waitFor mls.send(mail)
   echo waitFor mls.getQuota()

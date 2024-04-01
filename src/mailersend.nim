@@ -1,7 +1,11 @@
-# This is just an example to get you started. A typical library package
-# exports the main API in this file. Note that you cannot rename this file
-# but you can remove it if you wish.
-
-proc add*(x, y: int): int =
-  ## Adds two numbers together.
-  return x + y
+# Asynchronous Nim client for
+# interacting with the MailerSend API
+#
+#     Official MailerSend Documentation:
+#     https://developers.mailersend.com
+#
+# (c) 2024 George Lemon | MIT License
+#          Made by Humans from OpenPeeps
+#          https://github.com/openpeeps/mailersend-nim
+import mailersend/[meta, email]
+export meta, email

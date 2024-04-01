@@ -1,12 +1,16 @@
-# This is just an example to get you started. You may wish to put all of your
-# tests into a single file, or separate them into multiple `test1`, `test2`
-# etc. files (better names are recommended, just make sure the name starts with
-# the letter 't').
-#
-# To run these tests, simply execute `nimble test`.
+# import unittest, mailersend
 
-import unittest
+# import dotenv
+# from std/os import getEnv
+# from std/macros import getProjectPath
 
-import mailersend
-test "can add":
-  check add(5, 5) == 10
+# test "can add":
+#   dotenv.load(getProjectPath())
+#   var mls = initMailerSend(getEnv("api_key"))
+#   let mail = newEmail()
+#   mail.setSubject("Test email - This is a subject")
+#       .setFrom("GoodGuest.ro", "noreply@goodguest.ro")
+#       .setTo("George Lemon", "georgelemon@protonmail.com")
+#       .setText("This is a plain text messsage")
+#   # echo waitFor mls.send(mail)
+#   echo waitFor mls.getQuota()
