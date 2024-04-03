@@ -5,8 +5,6 @@ author        = "George Lemon"
 description   = "Asynchronous Nim client for interacting with MailerSend API"
 license       = "MIT"
 srcDir        = "src"
-binDir        = "bin"
-bin           = @["mailersend"]
 
 # Dependencies
 
